@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+{% load static %}
+<style>
+
+  body {font-family: "DIN", "DIN", "DIN";}
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 5px;
+  }
+  .w3-bar-item.w3-button:hover {
+    background-color: inherit !important;
+    text-decoration: underline;
+  }
+
+  /* Change the color of the navigation bar */
+  .w3-bar {
+    background: linear-gradient(rgba(9, 44, 98, 0.8), rgba(9, 44, 98, 0.8)), url('https://images5.alphacoders.com/437/437716.jpg');
+    background-size: cover;
+    color: white !important;
+  }
+
+  /* Change the color of the button links in the navigation bar */
+  .w3-bar .w3-button {
+    color: white !important;
+  }
+
+  .logout-btn {
+    position: absolute;
+    right: 10px;
+  }
+
+  .logo {
+    order: -1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+    <div class="logo">
+      <a href="#start" class="w3-bar-item w3-button"><img src="/media/DreesSommer_weiß.png" alt="DreSo Logo Weiß" style="width:120px;"> </a>
+    </div>
+
+    <div class="logout-btn">
+      {% if user.is_authenticated %}
+          <a href="{% url 'logout' %}?next={{request.path}}" class="w3-bar-item w3-button">Logout</a>
+      {% endif %}
+    </div>
+  
+  
+    <div class="nav-menu">
+        <a href="#start" class="w3-bar-item w3-button">Start</a>
+        <a href="#strategie" class="w3-bar-item w3-button">Strategie</a>
+        <a href="#portfoliomanagement" class="w3-bar-item w3-button">Portfoliomanagement</a>
+        <a href="#esg" class="w3-bar-item w3-button">ESG</a>
+        <a href="#assetmanagement" class="w3-bar-item w3-button">AM</a>
+        <a href="#propertymanagement" class="w3-bar-item w3-button">PM</a>
+        <a href="#facilitymanagement" class="w3-bar-item w3-button">FM</a>
+        <a href="#finance" class="w3-bar-item w3-button">Finance</a>
+        <a href="#transactions" class="w3-bar-item w3-button">Transactions</a>
+        <a href="#valuation" class="w3-bar-item w3-button">Valuation</a>
+        <a href="#benchmarking" class="w3-bar-item w3-button">Benchmarking</a>
+    </div>
+  </div>
+</div>
+  
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="/w3images/hamburger.jpg" alt="Hamburger Catering" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge">Le Catering</h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+    <!-- Start Section -->
+    <div class="w3-row w3-padding-64" id="start">
+        <br>
+        <br>
+        <h1 class="w3-center">Herzlich Willkommen</h1>
+        <h5 class="w3-center"> auf unserer Power BI Demo Website.</h5>
+        <br>
+        <p class="w3-large">Hier präsentieren wir Ihnen eine Auswahl unserer maßgeschneiderten Power BI-Berichte und Analysen. Bei Drees & Sommer ist es unser Ziel, jedem Unternehmen individuelle Lösungen zu bieten, die präzise auf ihre spezifischen Bedürfnisse und Daten zugeschnitten sind. </p>
+        <p class="w3-large">Unser erfahrenes Team von Datenexperten hat eine umfangreiche Expertise in der Erstellung von interaktiven Dashboards und Datenvisualisierungen. Wir nutzen unser fundiertes Wissen und unsere Fähigkeiten, um Sie dabei zu unterstützen, informierte Entscheidungen zu treffen, die Ihr Unternehmen erfolgreich in die Zukunft führen.</p>
+        <p class="w3-large">Wir laden Sie ein, durch unsere Seiten zu navigieren und zu entdecken, was wir für Ihr Unternehmen leisten können. Unsere Power BI-Berichte und Analysen sind mehr als nur Werkzeuge - sie sind strategische Ressourcen, die Ihnen helfen, Ihre Geschäftsziele zu erreichen und Ihre Wettbewerbsposition zu stärken.</p>
+    </div>
+    
+    <hr>
+
+    <!-- Strategy Section -->
+    <div class="w3-row w3-padding-64" id="strategy" style="text-align: center;">
+        <h2 class="w3-text-center">Strategie</h2>
+        <div style="display: flex; justify-content: center;">
+            <iframe width="1200" height="600" src="https://app.powerbi.com/reportEmbed?reportId=ff6373e2-9756-480c-8224-0c2b7e8aaf50&autoAuth=true&ctid=4875ab0b-d837-4817-b397-e19740d8b17f&filterPaneEnabled=false&navContentPaneEnabled=false" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+    </div>
+    
+    <hr>
+  
+  
+    <!-- Portfolio Management Section -->
+    <div class="w3-row w3-padding-64" id="portfoliomanagement" style="text-align: center;">
+      <!-- Your content here -->
+      <h2 class="w3-text-center">Portfoliomanagement</h2>
+    </div>
+  
+    <hr>
+  
+    <!-- ESG Section -->
+    <div class="w3-row w3-padding-64" id="esg" style="text-align: center;">
+        <h2 class="w3-text-center">ESG</h2>
+        <div style="display: flex; justify-content: center;">
+            <iframe width="1200" height="600" src="https://app.powerbi.com/reportEmbed?reportId=f8ca806a-0efa-4702-8158-d67dc02443c2&autoAuth=true&ctid=4875ab0b-d837-4817-b397-e19740d8b17f&filterPaneEnabled=false&navContentPaneEnabled=false" frameborder="0" allowFullScreen="true"></iframe>
+        </div>
+    </div>
+  
+    <hr>
+  
+    <!-- Asset Management Section -->
+    <div class="w3-row w3-padding-64" id="assetmanagement" style="text-align: center;">
+      <!-- Your content here -->
+      <h2 class="w3-text-center">Asset Management</h2>
+    </div>
+  
+    <hr>
+  
+    <!-- Property Management Section -->
+    <div class="w3-row w3-padding-64" id="propertymanagement" style="text-align: center;">
+      <!-- Your content here -->
+      <h2 class="w3-text-center">Property Management</h2>
+    </div>
+  
+    <hr>
+
+    <!-- Facility Management Section -->
+    <div class="w3-row w3-padding-64" id="facilitymanagement" style="text-align: center;">
+        <!-- Your content here -->
+        <h2 class="w3-text-center">Facility Management</h2>
+        </div>
+    
+        <hr>
+        
+    <!-- Finance Section -->
+    <div class="w3-row w3-padding-64" id="finance" style="text-align: center;">
+      <!-- Your content here -->
+      <h2 class="w3-text-center">Finance</h2>
+    </div>
+  
+    <hr>
+  
+    <!-- Transactions Section -->
+    <div class="w3-row w3-padding-64" id="transactions" style="text-align: center;">
+      <!-- Your content here -->
+      <h2 class="w3-text-center">Transactions</h2>
+    </div>
+  
+    <hr>
+  
+    <!-- Valuation Section -->
+    <div class="w3-row w3-padding-64" id="valuation" style="text-align: center;">
+      <!-- Your content here -->
+      <h2 class="w3-text-center">Valuation</h2>
+    </div>
+  
+    <hr>
+
+    <!-- Valuation Section -->
+    <div class="w3-row w3-padding-64" id="benchmarking" style="text-align: center;">
+        <!-- Your content here -->
+        <h2 class="w3-text-center">Benchmarking</h2>
+      </div>
+    
+      <hr>
+  <!-- End page content -->
+  </div>
+  
+
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-32">
+    <p>Powered by <a href="https://www.dreso.com" title="Drees & Sommer" target="_blank" class="w3-hover-text-blue">Drees & Sommer</a></p>
+    <a href="impressum.html" class="w3-bar-item w3-button">Impressum</a>
+    <a href="datenschutz.html" class="w3-bar-item w3-button">Datenschutz</a>
+</footer>
+  
+
+</body>
+</html>
